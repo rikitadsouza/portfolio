@@ -1,0 +1,115 @@
+/* src/pages/PositionsPage.css */
+
+.positions-page {
+    padding: 3rem;
+    color: #f0f0f0; 
+    min-height: 100vh; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.positions-page h2 {
+    font-size: 2rem;
+    color: var(--primary-color); /* Use primary color for headings */
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.positions-page h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.positions-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+    width: 100%;
+    max-width: 1200px; /* Limit width for readability */
+}
+
+.position-item {
+    background: #1e1e1e; /* Darker background for items */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for interactive effects */
+}
+
+.position-item:hover {
+    transform: translateY(-8px); /* Slight lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deep shadow on hover */
+}
+
+.position-item h4 {
+    font-size: 1.6rem;
+    color: var(--primary-color); /* Use primary color for headings */
+    margin: 0;
+}
+
+.position-item p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.links {
+    margin-top: 1rem;
+}
+
+.button {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background: var(--primary-color);
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background: #530252; /* Change to a different color on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.button:active {
+    background: #530252; /* Darker color when clicked */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .positions-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .position-item {
+        padding: 1.5rem; /* Reduce padding on smaller screens */
+    }
+
+    .position-item h4 {
+        font-size: 1.4rem;
+    }
+
+    .position-item p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        margin-right: 0.5rem; /* Reduce space between buttons on smaller screens */
+    }
+}

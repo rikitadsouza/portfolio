@@ -1,0 +1,115 @@
+.internships-page {
+    padding: 3rem;
+    color: #f0f0f0;
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-color); 
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.internship-item {
+    background: #1e1e1e; 
+    border-radius: 10px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 800px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internship-item:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); 
+}
+
+.internship-item h3 {
+    font-size: 1.6rem;
+    color: var(--primary-color); 
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.internship-item p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.internship-item ul {
+    list-style-type: disc; 
+    padding-left: 1.5rem; 
+    margin: 1rem 0;
+}
+
+.internship-item li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.certificate-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background: var(--primary-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.certificate-link:hover {
+    background: #530252; 
+    transform: scale(1.05); 
+}
+
+.certificate-link:active {
+    background: #5c0e60;
+}
+
+
+@media (max-width: 768px) {
+    .internship-item {
+        padding: 1.5rem;
+    }
+
+    .internship-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .internship-item p {
+        font-size: 0.9rem;
+    }
+
+    .internship-item li {
+        font-size: 0.9rem;
+    }
+
+    .certificate-link {
+        font-size: 0.9rem;
+    }
+}

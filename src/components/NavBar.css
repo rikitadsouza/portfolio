@@ -1,0 +1,148 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(14, 14, 14, 0.7);
+  box-shadow: 0 2px 4px #da06d61a;
+  padding: 3px 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+nav ul li {
+  margin: 5px 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Change to purple on hover */
+nav ul li a:hover {
+  color: #a61aa4; /* Purple */
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 15px;
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+
+/* Base SVG styles */
+svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Circle styles */
+.circle-outer, .circle-middle, .circle-inner {
+  stroke-width: 1.5;
+  fill: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: stroke 3s ease-in-out;
+}
+
+/* Color animations */
+@keyframes colorChangeOuter {
+  0% { stroke: #6a0dad; }
+  50% { stroke: #9b4f9c; }
+  100% { stroke: #6a0dad; }
+}
+
+@keyframes colorChangeMiddle {
+  0% { stroke: #9b4f9c; }
+  50% { stroke: #b9a0d1; }
+  100% { stroke: #9b4f9c; }
+}
+
+@keyframes colorChangeInner {
+  0% { fill: #b9a0d1; }
+  50% { fill: #9b4f9c; }
+  100% { fill: #b9a0d1; }
+}
+
+/* Apply animations */
+.circle-outer {
+  animation: colorChangeOuter 3s infinite;
+}
+
+.circle-middle {
+  animation: colorChangeMiddle 3s infinite;
+}
+
+.circle-inner {
+  animation: colorChangeInner 3s infinite;
+}
+
+/* Responsive navigation for smaller screens */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: none; /* Hide menu by default */
+  }
+
+  nav ul.expanded {
+    display: flex; /* Show menu when expanded */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: auto;
+  }
+}
+
+/* Hide hamburger menu button on larger screens */
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
