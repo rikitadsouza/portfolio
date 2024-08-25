@@ -15,7 +15,7 @@ const SkillsPage = () => {
 
   const skillIcons = [
     'react', 'python', 'java', 'javascript', 'html5', 'css3',
-    'nodejs', 'mongodb', 'mysql', 'git', 'docker', 'kotlin', 'sass', 'webpack'
+    'nodejs', 'mongodb', 'mysql', 'git', 'docker', 'kotlin','webpack'
   ];
 
   return (

@@ -11,7 +11,7 @@ const LandingPage = () => {
         <div className="text-content">
           <h1>Rikita Chiara Dsouza</h1>
           <h3>Aspiring Software Engineer</h3>
-          <p className="tagline">A pre-final year B.E student in Computer Science and Business Systems with a profound passion for software development, web development, and machine learning.Driven by a relentless desire to expand my skills and take on new challenges.</p>
+          <p className="tagline">A Final year student pursuing B.E in Computer Science and Business Systems with a profound passion for software development, web development, and machine learning.Driven by a relentless desire to expand my skills and take on new challenges.</p>
           <p className="tagline">Always ready to CODE, LEARN, INSPIRE!</p>
           <div className="cta-group">
             <a href="#projects" className="cta-button primary">View Projects</a>

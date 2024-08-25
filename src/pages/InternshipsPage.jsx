@@ -4,6 +4,15 @@ import './InternshipsPage.css';
 const InternshipsPage = () => {
   const internships = [
     {
+      company: 'Infosys Springboard',
+      position: 'Trainee',
+      duration: 'July 2024 - Ongoing',
+      description: [
+        'Pragati: Path to Future, a career development program for women focusing on self-growth, professional advancement, and leadership skills.',
+        'Gaining technical proficiency in Python, Java, AI, and Machine Learning as part of the curriculum.'
+      ]
+    },
+    {
       company: 'Edunet Foundation',
       position: 'AI/Cloud Intern',
       duration: 'June 2024 - July 2024',
